@@ -1,3 +1,4 @@
-## This is a Readme
+## Assignment 12
 
-> You should probably update me.
+* Used API data to load onto my Etsy page instead of the data pasted into a .js file
+* Practice with $.ajax

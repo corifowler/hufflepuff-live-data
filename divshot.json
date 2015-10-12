@@ -1,0 +1,6 @@
+{
+  "name": "tiy-cori-week4-hufflepuff-livedata",
+  "root": "app",
+  "clean_urls": true,
+  "error_page": "error.html"
+}
