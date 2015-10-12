@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>If I search Etsy for Hufflepuff,</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">Etsy</span>
+      <div class="search-area">
+        <form method="get" action="/">
+          <input type="text" name="Search" placeholder="Search for items or shops" id="Search"><button class="search-btn">Search</button>
+        </form>
+      </div>
+      <div class='right-side'>
+        <span class="sell">Sell on Etsy</span>
+        <span class="sell">Register</span>
+        <button class="signin">Sign In</button>
+      </div>
+      <div class="cart">
+        <img src="../images/cart.png">
+        <span>Cart</span>
+      </div>
+    </header>
+    <div class="nav-menu">
+      <nav>
+        <ul>
+          <li><a href='#'>Clothing & Accessories</a></li>
+          <li><a href='#'>Jewelry</a></li>
+          <li><a href='#'>Craft Supplies & Tools</a></li>
+          <li><a href='#'>Weddings</a></li>
+          <li><a href='#'>Entertainment</a></li>
+          <li><a href='#'>Home & Living</a></li>
+          <li><a href='#'>Kids & Baby</a></li>
+          <li><a href='#'>Vintage</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="show-results">
+      <span class="show">Show Results For:</span>
+      <span class="all-cats"><a href="https://www.etsy.com/search?q=hufflepuff&ref=auto1">All Categories</a> >"hufflepuff" (4,887 Results)</span>
+      <span class="sort">Sort By: Relevancy</span>
+    </div>
+    <aside>
+      <div class="categories">
+        <span>All Categories</span>
+        <ul>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href='#'>Clothing</a></li>
+          <li><a href='#'>Home & Living</a></li>
+          <li><a href="#">Art & Collectibles</a></li>
+          <li><a href="#">Bags & Purses</a></li>
+          <li><a href="#">Paper & Party Supplies</a></li>
+          <li><a href='#'>Bath & Beauty</a></li>
+          <li><a href='#'>Craft Supplies & Tools</a></li>
+          <li><a href='#'>Books, Movies, & Music</a></li>
+          <li><a href='#'>Toys & Games</a></li>
+          <li><a href='#'>Electronics & Accessories</a></li>
+          <li><a href='#'>Weddings</a></li>
+          <li><a href='#'>Pet Supplies</a></li>
+          <li><a href='#'>Shoes</a></li>
+        </ul>
+      </div>
+      <span class="refine-search">Refine your search</span>
+      <div class="refine-results">
+        <section class="item-type">
+          Item Type
+          <ul>
+            <li><input type="radio" name="items" value=
+            "checked">All Items</li>
+            <li><input type="radio" name="items">Goblin-made</li>
+            <li><input type="radio" name="items">Horcrux</li>
+          </ul>
+        </section>
+        <hr>
+        <section class="price">
+          <span>Price</span>
+          <br>
+          <div class="low-price">
+          $
+          <input type="text" placeholder="Low">
+          </div> 
+          <span>to</span>
+          <div class="high-price">
+          $ 
+          <input type="text" placeholder="High">
+          </div>
+          <button></button>
+        </section>
+        <hr>
+        <section class="color-filter">
+          Filter by Color
+          <ul>
+            <li class="red"></li>
+            <li class="orange"></li>
+            <li class="yellow"></li>
+            <li class="green"></li>
+            <li class="blue"></li>
+            <li class="purple"></li>
+            <li class="black"></li>
+            <li class="white"></li>
+          </ul>
+        </section>
+        <hr>
+        <section class="order-opts">
+          Ordering Options
+          <ul>
+            <li><input type="checkbox">Accepts Etsy Gift Cards</li>
+            <li><input type="checkbox">Send by Owl</li>
+          </ul>
+        </section>
+        <hr>
+        <section class="location">
+          Shop Location
+          <ul>
+            <li><input type="radio" name="location" value="checked">Diagon Alley</li>
+            <li><input type="radio" name="location">Hogsmeade</li>
+            <li><span><a href="#">Choose a Custom Location</a></span></li>
+          </ul>
+        </section>
+        <hr>
+        <section class="ship-to">
+          Ship to
+          <br>
+          <select>
+            <option>Gryffindor</option>
+            <option>Ravenclaw</option>
+            <option>Slytherin</option>
+            <option>Hufflepuff</option>
+          </select>
+        </section>
+      </div>
+    </aside>
+    <div class="results-area">
+
+      <script type="text/template" id="itemTemplate">
+        <div class="item-display">
+            <img class="heart" src="../images/heart.png">
+            <img class="hamburger" src="../images/hamburger.png">
+          <a href="<%= results.url %>"><img src=<%= results.Images[0].url_170x135 %>></a>
+          <div class="title"><a href="<%= url %>"><%= title %></a></div>
+          <div class="seller"><a href="<%= Shop.url %>"><%= Shop.shop_name %></a></div>
+          <div class="the-price"><span>$</span><%= price %></div>
+        </div>
+      </script>
+    </div>
+
+    <div class="related-stuff">
+      <span>Related to <strong>hufflepuff</strong></span>
+      <ul>
+        <li>harry potter</li>
+        <li>hufflepuff sweater</li>
+        <li>hufflepuff scarf</li>
+        <li>hufflepuff shirt</li>
+      </ul>
+      <ul>
+        <li>hufflepuff hoodie</li>
+        <li>hufflepuff quidditch</li>
+        <li>hufflepuff mug</li>
+        <li>hufflepuff ring</li>
+      </ul>
+      <ul class="last-list">
+        <li>ravenclaw</li>
+        <li>hufflepuff tie</li>
+      </ul>  
+      <span>Looking for this shop? <a href="https://www.etsy.com/shop/Hufflepuffsith?ref=shop_name_search_sugg">Hufflepuffsith.</a></span>
+      <div class="page-btns">
+        <ul>
+          <li><</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>...</li>
+          <li>116</li>
+          <li class="no-border">></li>
+        </ul>
+      </div>
+    </div>
+    <div class="subscribe">
+      <p>Get top trends and fresh editors' picks in your inbox with Etsy Finds.</p>
+      <form method="get" action="/">
+        <input type="text" name="Subscribe" placeholder="Enter your email">
+      </form>
+      <button>Subscribe</button>
+    </div>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
