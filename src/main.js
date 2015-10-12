@@ -11,9 +11,10 @@
     dataType: 'jsonp',
     method: 'get'
   }).then (function (response) {
-    let liveData = renderTemplate(response);
-    console.log(liveData);
-    template.append(liveData);
+    _.each( response.results, function(item){
+      var liveData = renderTemplate(item);
+      $('.results-area').append(liveData);
+    })  
   });  
 
 

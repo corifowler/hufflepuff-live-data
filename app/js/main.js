@@ -12,9 +12,10 @@
     dataType: 'jsonp',
     method: 'get'
   }).then(function (response) {
-    var liveData = renderTemplate(response);
-    console.log(liveData);
-    template.append(liveData);
+    _.each(response.results, function (item) {
+      var liveData = renderTemplate(item);
+      $('.results-area').append(liveData);
+    });
   });
 
   // With proxy
