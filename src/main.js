@@ -17,6 +17,21 @@
     })  
   });  
 
+// make hover images appear & disappear
+
+  $('.results-area').on('mouseenter', '.item-display', function(){
+     $(this).find('.heart').toggleClass('show');
+     $(this).find('.hamburger').toggleClass('show');
+  });
+
+  $('.results-area').on('mouseleave', '.item-display', function(){
+     $(this).find('.heart').toggleClass('show');
+     $(this).find('.hamburger').toggleClass('show');
+  });
+
+}());
+
+
 
 
 // With proxy
@@ -34,19 +49,3 @@
   //     console.log(liveData);
   //     $('#itemTemplate').append(liveData);
   //   });
-
-// make hover images appear & disappear
-
-  $('.results-area').on('mouseenter', '.item-display', function(){
-     $(this).find('.heart').toggleClass('show');
-     $(this).find('.hamburger').toggleClass('show');
-      console.log('maybe toggling?');
-  });
-
-  $('.results-area').on('mouseleave', '.item-display', function(){
-     $(this).find('.heart').toggleClass('show');
-        $(this).find('.hamburger').toggleClass('show');
-      console.log('maybe toggling?');
-  });
-
-}());
