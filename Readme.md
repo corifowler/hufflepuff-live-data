@@ -1,4 +1,6 @@
-## Assignment 12
+## Practice with Etsy API 
 
-* Used API data to load onto my Etsy page instead of the data pasted into a .js file
+View project here: http://hufflepuff-etsy.surge.sh/
+
+* Used API data to load Etsy search results onto webapp
 * Practice with $.ajax
